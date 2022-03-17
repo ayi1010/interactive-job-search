@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@mapbox/mapbox-sdk": "^0.13.3",
+    "dotenv": "^16.0.0"
+  },
+  "scripts": {
+    "start": "node js/map.js"
+  }
+}
