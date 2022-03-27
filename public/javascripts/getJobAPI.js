@@ -1,12 +1,14 @@
-// const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
-// const mbxToken = process.env.mapbox_token
-// const geocoder = mbxGeocoding({ accessToken: mbxToken });
+// console.log('apiId', apiId)
+// console.log('apiKey', apiKey)
 
-// const createMap = async (req, res) => {
-//     const geoData = await geocoder.forwardGeocode({
-//         query: 'Sydney, Australia',
-//         limit: 1
-//     }).send()
-//     console.log(geoData)
-//     res.send("OK!!")
-// }
+const getJobs = async (what, where) => {
+    const url = `https://api.adzuna.com/v1/api/jobs/au/search/2?app_id=${apiId}&app_key=${apiKey}&results_per_page=10000&what=${what}&sort_by=date`;
+    try {
+        const res = await axios.get(url)
+        const data = res.data.results
+        return data
+    } catch (e) {
+        console.log('Error!', e)
+    }
+}
+
