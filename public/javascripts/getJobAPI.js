@@ -1,6 +1,3 @@
-// console.log('apiId', apiId)
-// console.log('apiKey', apiKey)
-
 const getJobs = async (what) => {
     const url = `https://api.adzuna.com/v1/api/jobs/au/search/2?app_id=${apiId}&app_key=${apiKey}&results_per_page=10000&what=${what}&sort_by=date`;
     try {
