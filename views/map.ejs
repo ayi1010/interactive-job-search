@@ -14,8 +14,6 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 
-
-
     <link rel="stylesheet" href="/stylesheets/map.css">
 
 
@@ -34,9 +32,14 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
                 integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
                 crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
             <script> // browser cannot understand process.env
+                const apiId = '<%-process.env.apiId%>'
+                const apiKey = '<%-process.env.apiKey%>'
                 const mbxToken = '<%-process.env.mapbox_token%>'
             </script>
+
+            <script src="/javascripts/getJobAPI.js"></script>
             <script src='/javascripts/map.js'></script>
 </body>
 
