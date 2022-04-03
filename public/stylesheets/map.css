@@ -1,15 +1,6 @@
 body {
     height: 100vh;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://images.unsplash.com/photo-1489702932289-406b7782113c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxfDB8MXxhbGx8fHx8fHx8fA&ixlib=rb-1.2.1&q=80&w=1080&utm_source=unsplash_source&utm_medium=referral&utm_campaign=api-credit"); */
-    background-size: cover;
-    background-position: center;
-    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
-}
-
-.cover-container {
-  max-width: 60vw;
+    /* box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5); */
 }
 
 .nav-link {
@@ -36,20 +27,28 @@ body {
     text-shadow: none;
 }
 
-#map { 
-    position: absolute; 
-    width: 80vh; 
-    height: 80vh;
+.main {
+    position: relative;
+    height: 100%;
 }
 
-.marker {
+#map { 
+    position: absolute;
+    left: 0;
+    right: 0; 
+    margin: 0 auto;
+    width: 90%; 
+    height: 80%;
+}
+
+/* .marker {
     background-image: url('./img/mapIcon.png');
     background-size: cover;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     cursor: pointer;
-}
+} */
 
 .mapboxgl-popup {
     max-width: 200px;
@@ -58,5 +57,6 @@ body {
 .mapboxgl-popup-content {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    text-shadow: none;
 }
+
+
