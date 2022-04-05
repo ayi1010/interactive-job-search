@@ -3,7 +3,7 @@ class MarkerManager {
         this.currentId = currentId;
         this.markers = [];
     }
-    createGeojson(jobData) {
+    convertToGeojson(jobData) {
         // refactor with reduce method
         const geojson =
         {
