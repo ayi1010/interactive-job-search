@@ -4,7 +4,7 @@
 
 <h3>Ongoing project </h3>
 
-[![30%]][bar-url]
+![](https://us-central1-progress-markdown.cloudfunctions.net/progress/30)
  
  This is an interactive job search application for programming jobs around Australia.
 
@@ -12,4 +12,3 @@
 
  [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/aerim-yi/
-[bar-url]: https://progress-bar.dev/30
