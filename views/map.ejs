@@ -26,18 +26,18 @@
                     <div class="col-3 mr-1">
                         <label for="search_what">Search Terms</label>
                         <input class="form-control" type="search" placeholder="search jobs..." aria-label="Search"
-                            id="search_what">
+                            id="search_what" value="<%= config.defaultSearchTerms %>">
                     </div>
                     <div class="col-3 mr-1">
-                        <label for="search_what">Search Terms<br>that may be found
+                        <label for="search_what">Terms that may be found
                         </label>
                         <input class="form-control" type="search" placeholder="search jobs..." aria-label="Search"
-                            id="search_what_or">
+                            id="search_what_or" value="<%= config.defaultSearchOR %>">
                     </div>
                     <div class="col-3 mr-1">
-                        <label for="search_what">Search terms to exclude</label>
+                        <label for="search_what">Terms to exclude</label>
                         <input class="form-control" type="search" placeholder="search jobs..." aria-label="Search"
-                            id="search_what_exclude">
+                            id="search_what_exclude" value="<%= config.defaultSearchExclude %>">
                     </div>
                     <div class="col-auto">
                         <button class="btn btn-outline-success" type="submit">Search</button>
@@ -63,10 +63,10 @@
                 const mbxToken = '<%-process.env.mapbox_token%>'
             </script>
 
-            <script src='/javascripts/map.js'></script>
             <script src="/javascripts/getJobAPI.js"></script>
             <script src="/javascripts/markerManager.js"></script>
-            <script src="/javascripts/index.js"></script>
+            <script src='/javascripts/map.js'></script>
+            <script src="/javascripts/config/index.js"></script>
 </body>
 
 </html>
