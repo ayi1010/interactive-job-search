@@ -6,6 +6,8 @@ const express = require('express');
 const app = express();
 const path = require('path')
 
+const config = require('./public/javascripts/config/index')
+
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
@@ -15,15 +17,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/map', (req, res) => {
-    res.render('map')
-})
-
-app.get('/something', (req, res) => {
-    res.send("<h1><i>Something</i> will be here soon!</h1>")
-})
-
-app.get('/something/new', (req, res) => {
-    res.send("<h1>Something <i>new</i> will be here soon!</h1>")
+    res.render('map', { config })
 })
 
 app.use(express.static(path.join(__dirname, 'public')))

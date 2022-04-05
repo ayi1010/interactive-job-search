@@ -30,8 +30,6 @@ class MarkerManager {
         return geojson
     }
     addMarkers(data) {
-        console.log(data)
-        console.log(data.features)
         data.features.forEach(feature => {
             // set marker
             const marker = new mapboxgl.Marker()
@@ -49,10 +47,13 @@ class MarkerManager {
         })
     }
     deleteMarkers() {
+        for (let marker of this.markers) {
+            marker.remove()
+        }
         // for (let i=0; i < this.markers.length; i++){
         //     this.markers.remove();
         // }
-        this.markers.forEach(marker => { marker.remove() })
+        // this.markers.forEach(marker => { marker.remove() })
     }
 }
 
