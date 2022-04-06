@@ -3,13 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Interactive Job Search</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
+
     <!-- Mapbox -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
@@ -22,29 +23,28 @@
 <body class="d-flex flex-column vh-100">
     <%- include('./partials/navbar')%>
         <main class="container main mt-3">
-            <div class="row">
-                <form class="d-flex justify-content-center align-items-end" id="formSubmit">
-                    <div class="col-3 mr-1">
+            <form id="formSubmit">
+                <div class="row d-flex align-items-end">
+                    <div class="col-12 col-sm-6 col-lg-4">
                         <label for="search_what">Search Terms</label>
                         <input class="form-control tagin" name="tags" type="search" placeholder="search jobs..."
                             aria-label="Search" id="search_what" value="<%= config.defaultSearchTerms.join(' ')%>">
                     </div>
-                    <div class="col-3 mr-1">
-                        <label for="search_what">Terms that may be found
-                        </label>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <label for="search_what">Terms that may be found</label>
                         <input class="form-control tagin" name="tags" type="search" placeholder="search jobs..."
                             aria-label="Search" id="search_what_or" value="<%= config.defaultSearchOR.join(' ') %>">
                     </div>
-                    <div class="col-3 mr-1">
+                    <div class="col-12 col-sm-6 col-lg-3">
                         <label for="search_what">Terms to exclude</label>
                         <input class="form-control tagin" name="tags" type="search" placeholder="search jobs..."
                             aria-label="Search" id="search_what_exclude"
                             value="<%= config.defaultSearchExclude.join(' ') %>">
                     </div>
-                    <div class="col-auto">
+                    <div class="col-12 col-sm-6 col-md-2 col-lg-2">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </div>
-                </form>
+            </form>
             </div>
             <div class="row mt-2">
                 <div id="map"></div>
