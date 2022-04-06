@@ -1,7 +1,7 @@
 const config = {
-    defaultSearchTerms: 'javascript',
-    defaultSearchOR: 'web',
-    defaultSearchExclude: 'senior'
+    defaultSearchTerms: ['javascript', 'developer'],
+    defaultSearchOR: ['web'],
+    defaultSearchExclude: ['senior']
 }
 
 // Allow file to be used in both browser and Node

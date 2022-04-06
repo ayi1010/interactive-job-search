@@ -15,6 +15,7 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
 
     <link rel="stylesheet" href="/stylesheets/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/tagin@2.0.2/dist/tagin.min.css">
 
 </head>
 
@@ -25,25 +26,25 @@
                 <form class="d-flex justify-content-center align-items-end" id="formSubmit">
                     <div class="col-3 mr-1">
                         <label for="search_what">Search Terms</label>
-                        <input class="form-control" type="search" placeholder="search jobs..." aria-label="Search"
-                            id="search_what" value="<%= config.defaultSearchTerms %>">
+                        <input class="form-control tagin" name="tags" type="search" placeholder="search jobs..."
+                            aria-label="Search" id="search_what" value="<%= config.defaultSearchTerms.join(' ')%>">
                     </div>
                     <div class="col-3 mr-1">
                         <label for="search_what">Terms that may be found
                         </label>
-                        <input class="form-control" type="search" placeholder="search jobs..." aria-label="Search"
-                            id="search_what_or" value="<%= config.defaultSearchOR %>">
+                        <input class="form-control tagin" name="tags" type="search" placeholder="search jobs..."
+                            aria-label="Search" id="search_what_or" value="<%= config.defaultSearchOR.join(' ') %>">
                     </div>
                     <div class="col-3 mr-1">
                         <label for="search_what">Terms to exclude</label>
-                        <input class="form-control" type="search" placeholder="search jobs..." aria-label="Search"
-                            id="search_what_exclude" value="<%= config.defaultSearchExclude %>">
+                        <input class="form-control tagin" name="tags" type="search" placeholder="search jobs..."
+                            aria-label="Search" id="search_what_exclude"
+                            value="<%= config.defaultSearchExclude.join(' ') %>">
                     </div>
                     <div class="col-auto">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </div>
-            </div>
-            </form>
+                </form>
             </div>
             <div class="row mt-2">
                 <div id="map"></div>
@@ -62,11 +63,11 @@
                 const apiKey = '<%-process.env.apiKey%>'
                 const mbxToken = '<%-process.env.mapbox_token%>'
             </script>
-
+            <script src="https://unpkg.com/tagin@2.0.2/dist/tagin.min.js"></script>
+            <script src="/javascripts/config/index.js"></script>
             <script src="/javascripts/getJobAPI.js"></script>
             <script src="/javascripts/markerManager.js"></script>
             <script src='/javascripts/map.js'></script>
-            <script src="/javascripts/config/index.js"></script>
 </body>
 
 </html>
