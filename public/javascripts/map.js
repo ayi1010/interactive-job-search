@@ -38,3 +38,17 @@ formSubmit.addEventListener('submit', async (event) => {
     markerManager.addMarkers(filteredData)
 })
 
+// Adding tags for search terms
+const options = {
+    separator: ' ',
+    duplicate: false,
+    enter: true,
+    transform: 'input => input.toUpperCase()',
+    placeholder: ''
+}
+const tagin_what = new Tagin(document.querySelector('#search_what'), options)
+const tagin_what_or = new Tagin(document.querySelector('#search_what_or'), options)
+const tagin_what_exclude = new Tagin(document.querySelector('#search_what_exclude'), options)
+
+
+
