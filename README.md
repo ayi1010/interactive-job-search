@@ -4,7 +4,7 @@
 
 <h3>Ongoing project </h3>
 
-![](https://us-central1-progress-markdown.cloudfunctions.net/progress/30)
+![](https://us-central1-progress-markdown.cloudfunctions.net/progress/40)
  
  This is an interactive job search application for programming jobs around Australia.
 
