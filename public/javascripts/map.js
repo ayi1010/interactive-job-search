@@ -1,10 +1,10 @@
 // display the map
 mapboxgl.accessToken = mbxToken;
 const map = new mapboxgl.Map({
-    container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [135, -25], // starting position [lng, lat]
-    zoom: 3 // starting zoom
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [135, -25],
+    zoom: 3
 });
 
 // Add zoom and rotation controls to the map.
