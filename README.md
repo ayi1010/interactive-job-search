@@ -2,11 +2,13 @@
 
 <h1>Interactive Job Search Application</h1>
 
-<h3>Ongoing project </h3>
+<h3>Ongoing project</h3>
 
 ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/40)
  
  This is an interactive job search application for programming jobs around Australia.
+
+You can see the current website [here.](https://generation-oz-job-search.herokuapp.com/)
 
  You can see my progress on my [blog page.](https://www.sohwakhaeng.com/posts/going-all-the-way/)
 
