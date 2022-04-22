@@ -8,6 +8,10 @@ const path = require('path')
 
 const config = require('./public/javascripts/config/index')
 
+const passport = require('passport')
+const LocalStrategy = require('passport-local')
+const User = require('./models/user')
+
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
@@ -21,6 +25,8 @@ app.get('/map', (req, res) => {
 })
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(passport.initialize())
+app.use(passport.session())
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
