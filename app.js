@@ -5,6 +5,7 @@ dotenv.config()
 const express = require('express');
 const app = express();
 const path = require('path')
+const session = require('express-session');
 
 const config = require('./public/javascripts/config/index')
 
@@ -25,8 +26,13 @@ app.get('/map', (req, res) => {
 })
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(session())
 app.use(passport.initialize())
 app.use(passport.session())
+passport.use(new LocalStrategy(User.authenticate()))
+
+passport.serializeUser(User.serializeUser())
+passport.deserializeUser(User.deserializeUser())
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
