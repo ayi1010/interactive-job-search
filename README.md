@@ -12,5 +12,18 @@ You can see the current website [here.](https://generation-oz-job-search.herokua
 
  You can see my progress on my [blog page.](https://www.sohwakhaeng.com/posts/going-all-the-way/)
 
+<h2>Technologies</h2>
+<ul>
+<li> 
+
+[Node.js](https://nodejs.org/en/)</li>
+<li>
+
+[Express.js](https://generation-oz-job-search.herokuapp.com/)</li>
+<li>
+
+[EJS](https://generation-oz-job-search.herokuapp.com/)</li>
+</ul>
+
  [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/aerim-yi/
