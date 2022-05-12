@@ -13,6 +13,8 @@ const passport = require('passport')
 const LocalStrategy = require('passport-local')
 const User = require('./models/user')
 
+const userRoutes = require('./routes/users')
+
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
@@ -24,15 +26,28 @@ app.get('/', (req, res) => {
 app.get('/map', (req, res) => {
     res.render('map', { config })
 })
+const sessionConfig = {
+    secret: "this should be a secret",
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        httpOnly: true,
+        expires: Date.now() + (1000 * 60 * 60 * 24 * 7),
+        maxAge: 1000 * 60 * 60 * 24 * 7
+        // expires after a week
+    }
+}
 
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(session())
+app.use(session(sessionConfig))
 app.use(passport.initialize())
 app.use(passport.session())
 passport.use(new LocalStrategy(User.authenticate()))
 
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
+
+app.use('/', userRoutes)
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {
