@@ -19,10 +19,10 @@ You can see the current website [here.](https://generation-oz-job-search.herokua
 [Node.js](https://nodejs.org/en/)</li>
 <li>
 
-[Express.js](https://generation-oz-job-search.herokuapp.com/)</li>
+[Express.js](https://expressjs.com/)</li>
 <li>
 
-[EJS](https://generation-oz-job-search.herokuapp.com/)</li>
+[EJS](https://ejs.co/)</li>
 </ul>
 
  [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
