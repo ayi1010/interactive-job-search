@@ -4,7 +4,7 @@
 
 <h3>Ongoing project</h3>
 
-![](https://us-central1-progress-markdown.cloudfunctions.net/progress/40)
+![](https://us-central1-progress-markdown.cloudfunctions.net/progress/60)
  
  This is an interactive job search application for programming jobs around Australia.
 
@@ -19,10 +19,10 @@ You can see the current website [here.](https://generation-oz-job-search.herokua
 [Node.js](https://nodejs.org/en/)</li>
 <li>
 
-[Express.js](https://generation-oz-job-search.herokuapp.com/)</li>
+[Express.js](https://expressjs.com/)</li>
 <li>
 
-[EJS](https://generation-oz-job-search.herokuapp.com/)</li>
+[EJS](https://ejs.co/)</li>
 </ul>
 
  [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
